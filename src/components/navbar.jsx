@@ -1,13 +1,13 @@
-import "../Style/App.css"
-import React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import "../Style/App.css"
+import Logo from "../assets/movLogo.svg"
 
 const NavBar = () =>{
 
     return(
     <header>
-        <h1><Link to="/">My Bindge Watch List</Link></h1>
+        <div className="logo"><Link to="/"><img src={Logo} alt="" /><h1>My Bindge Watch List</h1></Link></div>
         <nav>
             <Link to="/movie" className="li">Movies</Link>
             <Link to="/tv_show" className="li">Tv Shows</Link>
