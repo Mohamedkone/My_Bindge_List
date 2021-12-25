@@ -212,6 +212,10 @@
     max-height: 40px;
   }
   
+  footer a{
+    color: #fff;
+    text-decoration-style:dotted;
+  }
   
 @media screen and (max-width:1580px){
     .container1, .container2r{

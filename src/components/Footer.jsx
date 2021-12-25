@@ -6,7 +6,7 @@ const Footer = () =>{
     return (
     <footer>
         <div className="logo"> <Link to="/"><img src={Logo} alt="" /> </Link></div>
-    <p>&copy; 2021 Designed by Mohamed Kone. </p>
+    <p>&copy; 2021 Designed by <a href="https://www.mohamedkone.com">Mohamed Kone</a>.</p>
   </footer>   
     )
 }
