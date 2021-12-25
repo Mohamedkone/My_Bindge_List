@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './Style/App.css';
 import Footer from './components/Footer';
 import Home from './components/Home';
+import Movie from './components/Movie'
 
 function App() {
   return (
@@ -11,7 +12,8 @@ function App() {
         <NavBar />
         <div className='components'>
         <Routes>
-          <Route path="/" element={<Home />}/>
+          <Route exact path="/" element={<Home />}/>
+          <Route  path="/movie" element={<Movie />}/>
         </Routes>
         </div>
         <Footer/>
