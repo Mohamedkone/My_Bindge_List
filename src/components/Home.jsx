@@ -29,7 +29,7 @@ const Home = () =>{
             
         ).then(test =>{
             SetTvInfo(test.data.results)
-            SetTvLength(20)     
+            SetTvLength(10)     
         })
 
     },[])

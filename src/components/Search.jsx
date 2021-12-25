@@ -9,6 +9,7 @@ const Search = () => {
     const [TvInfo, SetTvInfo] = useState()
     const [MovieLength, SetMovieLength] = useState()
     const [TvLength, SetTvLength] = useState()
+    const [ArrayLength, SetArrayLength] = useState()
     const params = useParams()
 
     useEffect(()=>{
@@ -17,6 +18,7 @@ const Search = () => {
             
         ).then(res =>{
             SetMovieInfo(res.data.results)
+            SetArrayLength(res.data.results.length)
             SetMovieLength(10)
         
         })
@@ -24,6 +26,11 @@ const Search = () => {
     },[params.id])
     let Cards = []
     let Cards2 =[]
+    let h3
+    if (ArrayLength == 0 ) {
+        Cards = []
+        h3 = "...No such Movie Available"
+    }else{
 
           for (let i = 0; i < MovieLength; i++) {
               Cards.push(<div key={i} className="card">
@@ -35,15 +42,17 @@ const Search = () => {
                 <img src={`${process.env.REACT_APP_IMG_PATH}${MovieInfo[i].poster_path}`} />
             </div>)
           }
+        }
     return(
 
         <div>
             <SearchBar />
             <div className="sec-content">
                     <section className="content-list">
-                        <h2>Search for <span id="s-result"></span></h2>
+                        <h2>Search for <span id="s-result">" {params.id} "</span></h2>
                         <div className="container1">
                             {Cards}
+                            <h3>{h3}</h3>
                         </div>
                     </section>
             </div>

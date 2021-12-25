@@ -3,9 +3,13 @@
     padding: 0;
   }
   body {
+    
     text-align: center;
     font-family: 'Dosis', sans-serif;
     background: #393E46;
+  }
+  .App{
+    min-height: 100vh;
   }
 
   header a{
@@ -49,6 +53,7 @@
   }
 
   .sec-content{
+    
     width: 80vw;
     margin: auto;
   }
@@ -117,12 +122,20 @@
   button:active{
       background: #999;
   }
+
+  .content-list{
+    min-height: 55.5vh;
+  }
   
-  .content-list h2{
+  .content-list h2, .content-list h3{
     font-size: 38px;
     color: #fff;
     text-align: start;
     margin: 40px auto ;
+  }
+  .content-list h3{
+    font-size: 25px;
+
   }
   
   .container1, .container2{
