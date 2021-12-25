@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import "../Style/App.css"
-import Search from "./Search";
+import SearchBar from "./SearchBar";
 
 
 const Home = () =>{
@@ -17,7 +17,6 @@ const Home = () =>{
             `${process.env.REACT_APP_DOMAIN}/discover/movie?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_watch_monetization_types=flatrate`
             
         ).then(res =>{
-            console.log(res.data.results[0].poster_path)
             SetMovieInfo(res.data.results)
             SetMovieLength(10)
         
@@ -30,7 +29,7 @@ const Home = () =>{
             
         ).then(test =>{
             SetTvInfo(test.data.results)
-            SetTvLength(10)     
+            SetTvLength(20)     
         })
 
     },[])
@@ -61,7 +60,16 @@ const Home = () =>{
 
 return(
     <div>
-        <Search />
+        <div className="search-section">
+            <div className="sec-content">
+            <h1>Movie Library</h1>
+            <h3>Find the best movies to bindge watch no matter
+            the category we've got your back.
+            </h3>
+            <SearchBar />
+            </div>
+        </div>
+        
     <div className="sec-content">
     <section className="content-list">
         <h2>Recent Movies To Bindge...</h2>

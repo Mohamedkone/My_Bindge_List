@@ -6,6 +6,7 @@ import Home from './components/Home';
 import Movie from './components/Movie'
 import TvShow from './components/TvShow';
 import Stars from './components/Stars';
+import Search from './components/Search';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route  path="/movie" element={<Movie />}/>
           <Route  path="/tv_show" element={<TvShow />}/>
           <Route  path="/stars" element={<Stars />}/>
+          <Route  path="/search/:id" element={<Search />}/>
         </Routes>
         </div>
         <Footer/>
