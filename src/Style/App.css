@@ -127,13 +127,13 @@
     min-height: 55.5vh;
   }
   
-  .content-list h2, .content-list h3{
+  .content-list h2, .content-list h4{
     font-size: 38px;
     color: #fff;
     text-align: start;
     margin: 40px auto ;
   }
-  .content-list h3{
+  .content-list h4{
     font-size: 25px;
 
   }

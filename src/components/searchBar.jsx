@@ -10,7 +10,7 @@ const SearchBar = () => {
     return(
         <div className="searchBar-section">
     <div className="go">
-      <input type="text" id="search-i" placeholder="Search Here..." onChange={(e)=>SetSearchValue(e.target.value)} />
+      <input type="text" id="search-i" placeholder="Search Here..." onChange={(e)=>SetSearchValue(e.target.value)} /*onKeyPress={(e)=>e.key.value=="Enter"?window.location.href(`/search/${searchValue}`):"key"}*//>
       <Link to={`/search/${searchValue}`}><button id="search"><img src={Loupe} alt="" /></button></Link>
     </div>
   </div>
