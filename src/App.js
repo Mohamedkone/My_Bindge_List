@@ -4,6 +4,7 @@ import './Style/App.css';
 import Footer from './components/Footer';
 import Home from './components/Home';
 import Movie from './components/Movie'
+import TvShow from './components/TvShow';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Home />}/>
           <Route  path="/movie" element={<Movie />}/>
+          <Route  path="/tv_show" element={<TvShow />}/>
         </Routes>
         </div>
         <Footer/>

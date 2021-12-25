@@ -34,7 +34,6 @@ const Home = () =>{
         })
 
     },[])
-    console.log(MovieInfo)
     let length = 1
     let Cards = []
     let Cards2 =[]
