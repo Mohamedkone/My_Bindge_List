@@ -1,5 +1,6 @@
 import "../Style/App.css"
 import Loupe from "../assets/loupe.png"
+import { Link } from "react-router-dom"
 
 const Search = () => {
     return(
@@ -11,8 +12,7 @@ const Search = () => {
             </h3>
             <div className="go">
                 <input type="text" id="search-input" placeholder="Search Here..." />
-                <button id="searchHome"><img src={Loupe} alt="" /></button>
-                <i className="fas fa-search"></i>
+                <Link to="/search"><button id="search"><img src={Loupe} alt="" /></button></Link>
             </div>
             </div>
         </div>

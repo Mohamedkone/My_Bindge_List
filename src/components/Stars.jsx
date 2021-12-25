@@ -41,7 +41,7 @@ const Stars = () =>{
             <SearchBar />
         <div className="sec-content">
             <section className="content-list">
-                <h2>Trending Actor...</h2>
+                <h2>Today's Trending Actor...</h2>
                 <div className="container1">
                     {Cards}
                 </div>
