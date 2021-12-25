@@ -29,7 +29,6 @@ const Home = () =>{
             `${process.env.REACT_APP_DOMAIN}/discover/tv?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_watch_monetization_types=flatrate`
             
         ).then(test =>{
-            console.log(test.data.results[0].poster_path)
             SetTvInfo(test.data.results)
             SetTvLength(10)     
         })
@@ -53,9 +52,9 @@ const Home = () =>{
             for (let i = 0; i < TvLength; i++) {
                 Cards2.push(<div className="card">
                 
-                <div class="info">
+                <div className="info">
                     <h3>{TvInfo[i].name}</h3>
-                    <p class="rl-date"> Aired on: {TvInfo[i].first_air_date}</p>
+                    <p className="rl-date"> Aired on: {TvInfo[i].first_air_date}</p>
                 </div>
                 <img src={`${process.env.REACT_APP_IMG_PATH}${TvInfo[i].poster_path}`} />
             </div>)

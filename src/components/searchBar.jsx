@@ -4,11 +4,11 @@ import "../Style/Searchbar.css"
 
 const SearchBar = () => {
     return(
-        <div class="searchBar-section">
-    <div class="go">
+        <div className="searchBar-section">
+    <div className="go">
       <input type="text" id="search-i" placeholder="SearchHere..." />
       <button id="search"><img src={Loupe} alt=""/></button>
-      <i class="fas fa-search"></i>
+      <i className="fas fa-search"></i>
     </div>
   </div>
     )
