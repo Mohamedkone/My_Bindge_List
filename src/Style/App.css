@@ -138,7 +138,7 @@
     flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
-    width: 190px;
+    width: 210px;
     margin: auto;
     border:0;
     cursor: pointer;
@@ -157,7 +157,7 @@
   
   .card img{
     /* height: 400px; */
-    width:190px;
+    width:210px;
     box-shadow: 0px 0 2px 1px #007b81;
     outline: none;
   }
