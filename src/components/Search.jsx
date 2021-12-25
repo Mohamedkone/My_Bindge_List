@@ -34,7 +34,6 @@ const Search = () => {
     }else{
 
           for (let i = 0; i < MovieLength; i++) {
-              console.log(MovieInfo[i].poster_path)
             if (MovieInfo[i].poster_path == null ) {
                 
                 imgs = `https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg`;

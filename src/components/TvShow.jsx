@@ -21,7 +21,7 @@ const TvShow = () =>{
         let Cards = []
 
         for (let i = 0; i < TvLength; i++) {
-            Cards.push(<div className="card">
+            Cards.push(<div key={i} className="card">
             
             <div className="info">
                 <h3>{TvInfo[i].name}</h3>

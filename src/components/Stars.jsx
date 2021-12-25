@@ -27,11 +27,11 @@ const Stars = () =>{
                } else {
                  imgs = `${process.env.REACT_APP_IMG_PATH}${Stars[i].profile_path}`;
                }
-            Cards.push(<div className="card">
+            Cards.push(<div key={i} className="card">
             
             <div className="info">
                 <h3>{Stars[i].name}</h3>
-                <p class="rl-date"> Known for: {Stars[i].known_for_department}</p>
+                <p className="rl-date"> Known for: {Stars[i].known_for_department}</p>
             </div>
             <img src={imgs} />
         </div>)

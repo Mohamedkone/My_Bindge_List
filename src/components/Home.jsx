@@ -38,7 +38,7 @@ const Home = () =>{
     let Cards2 =[]
 
           for (let i = 0; i < MovieLength; i++) {
-              Cards.push(<div className="card">
+              Cards.push(<div key={i} className="card">
                 
                 <div className="info">
                     <h3>{MovieInfo[i].title}</h3>
@@ -48,7 +48,7 @@ const Home = () =>{
             </div>)
           }
             for (let i = 0; i < TvLength; i++) {
-                Cards2.push(<div className="card">
+                Cards2.push(<div key={i} className="card">
                 
                 <div className="info">
                     <h3>{TvInfo[i].name}</h3>
