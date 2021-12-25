@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import "../Style/App.css"
+import Search from "./Search";
 
 
 const Home = () =>{
@@ -79,7 +80,10 @@ const [TvLength, SetTvLength] = useState()
 
 
 return(
-    <section className="movie-list">
+    <div>
+        <Search />
+    <div className="sec-content">
+    <section className="content-list">
         <h2>Recent Movies To Bindge...</h2>
         <div className="container1">
             {Cards}
@@ -89,6 +93,8 @@ return(
             {Cards2}
         </div>
   </section>
+  </div>
+  </div>
 )
 }
 

@@ -7,10 +7,7 @@
     font-family: 'Dosis', sans-serif;
     background: #393E46;
   }
-  .components{
-      width: 80vw;
-      margin: auto;
-  }
+
   header a{
     color: #EEEEEE;
     text-decoration: none;
@@ -46,7 +43,15 @@
     background: #00ADB5;
     color: #fff;
   }
+  .li:active{
+      background: rgb(0, 102, 107);
+      color: #ddd;
+  }
 
+  .sec-content{
+    width: 80vw;
+    margin: auto;
+  }
 
   .search-section {
     display: flex;
@@ -56,6 +61,7 @@
     height: 300px;
     background: #00ADB5;
     padding: 20px;
+    text-align: left;
   }
   
   .search-section h1{
@@ -97,19 +103,22 @@
     padding: 8px;
     border-radius: 0 8px 8px 0;
     border: 0;
-    height: 100%;
+    height: 45px;
     min-width: 5%;
     background: #ccc;
     cursor: pointer;
+    outline: none;
   }
   button img{
     width: 20px;
   }
+  button:active{
+      background: #999;
+  }
   
-
-  .movie-list h2{
+  .content-list h2{
     font-size: 38px;
-    color: #ddd;
+    color: #fff;
     text-align: start;
     margin: 40px auto ;
   }
