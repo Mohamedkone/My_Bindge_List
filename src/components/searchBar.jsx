@@ -6,7 +6,9 @@ import { useEffect, useState } from "react"
 
 const SearchBar = () => {
   let [searchValue, SetSearchValue] = useState()
-  useEffect(()=>{},[searchValue])
+  let [buttonD, SetButtonD] = useState()
+  
+  
     return(
         <div className="searchBar-section">
     <div className="go">

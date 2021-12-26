@@ -12,8 +12,8 @@ const Search = () => {
     const [ArrayLength, SetArrayLength] = useState()
     const params = useParams()
 
-    useEffect(()=>{
-        axios.get(
+    useEffect(async ()=>{
+         axios.get(
             `${process.env.REACT_APP_DOMAIN}/search/movie?query=${params.id}&api_key=${process.env.REACT_APP_API_KEY}`
             
         ).then(res =>{
@@ -21,7 +21,7 @@ const Search = () => {
             SetArrayLength(res.data.results.length)
             SetMovieLength(10)
         
-        })
+        },[params])
 
     },[params.id])
     let Cards = []
@@ -34,10 +34,17 @@ const Search = () => {
     }else{
 
           for (let i = 0; i < MovieLength; i++) {
+              console.log(MovieInfo)
+            if(MovieInfo[i].poster_path == undefined){
+                h4 = "...No such Movie Available"
+                break
+                
+               }else{
             if (MovieInfo[i].poster_path == null ) {
                 
                 imgs = `https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg`;
-               } else {
+               }
+                else {
                  imgs = `${process.env.REACT_APP_IMG_PATH}${MovieInfo[i].poster_path}`;
                }
               Cards.push(<div key={i} className="card">
@@ -49,6 +56,7 @@ const Search = () => {
                 <img src={imgs} />
             </div>)
           }
+        }
         }
     return(
 

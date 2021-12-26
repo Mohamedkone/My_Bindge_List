@@ -20,6 +20,7 @@ function App() {
           <Route  path="/tv_show" element={<TvShow />}/>
           <Route  path="/stars" element={<Stars />}/>
           <Route  path="/search/:id" element={<Search />}/>
+          <Route path="/search/undefined" element={<Navigate replace to="/" />}/>
           <Route path="/*" element={<Navigate replace to="/" />} />
         </Routes>
         </div>
